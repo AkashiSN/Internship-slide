@@ -1,0 +1,163 @@
+\documentclass[unicode,18px,aspectratio=169]{beamer} %アスペクト比16：9
+
+%% 和文用 %%
+\usepackage{bxdpx-beamer}
+\usepackage{zxjatype}
+\setCJKmainfont[Scale=0.95]{Meiryo} % フォント埋め込み
+
+%% スライドのテーマ %%
+%% https://qiita.com/htlsne/items/70cbb488e7a87cd9e228
+\usetheme[progressbar=frametitle]{metropolis}
+
+%% 各パッケージ %%
+\usepackage{amsmath} % 数式用
+\usepackage{bm} % ボールドイタリック（ベクトル）
+\usepackage{color} % 文字に色をつける
+\usepackage{slashbox} % 表に斜め線をつける
+\usepackage{hyperref} % ハイパーリンク
+\hypersetup{urlcolor=cyan} % URLの色をシアンにする
+\usepackage{url} % URL
+
+%% タイトル %%
+\title[インターン報告会]{インターン報告会2018}%[略タイトル]{タイトル}
+\author[西]{西\ 総一朗}%[略名前]{名前}
+\institute[4EJ]{明石高専4年電気情報工学科}%[略所属]{所属}
+% \newcommand{\todaye}{\the\year 年 \the\month 月\the\day 日}
+\date{\today}%日付
+
+\begin{document}
+	\begin{frame}[plain]\frametitle{}
+		\titlepage %表紙
+	\end{frame}
+
+	\section{インターンシップの概要} % (fold)
+	\label{sec:インターンシップの概要}
+		\begin{frame}\frametitle{インターンシップの概要}
+			\begin{table}[]
+				\begin{tabular}{ll}
+				\bf{受け入れ先} & 合同会社ヘマタイト \\
+				\bf{受け入れ期間} & 1ヶ月 \\
+				\bf{実施場所} & 本社（東京） \\
+				\bf{実施内容} & 製品の問題調査・問題解決・開発業務 \\
+						& サーバー保守\ \ カスタマーサポート \\
+						& セキュリティコンテストの運営業務
+				\end{tabular}
+			\end{table}
+		\end{frame}
+	% section インターンシップの概要 (end)
+
+	\section{会社概要} % (fold)
+	\label{sec:会社概要}
+		\begin{frame}\frametitle{合同会社ヘマタイト}
+			\begin{block}{}
+				\begin{columns}[c]
+					\begin{column}{0.4\textwidth}
+					\includegraphics[width=\columnwidth]{image/logo_with_catchphrase.png}
+					\end{column}
+				\end{columns}
+			\end{block}
+			\begin{alertblock}{}
+				\begin{columns}[t]
+					\begin{column}{0.55\textwidth}
+						\begin{block}{ビジョン}
+							\begin{itemize}
+								\item 「人とコンピュータの良い関係を作る。」
+							\end{itemize}
+						\end{block}
+						\begin{block}{事業領域}
+							\begin{itemize}
+								\item ソフトウェア開発
+								\item 情報セキュリティ
+								\item 情報教育
+							\end{itemize}
+						\end{block}
+					\end{column}
+					\begin{column}{0.45\textwidth}
+						\begin{block}{ソフトウェア開発}
+							\begin{itemize}
+								\item CTF\,Kit
+								\includegraphics[width=0.7\textwidth]{image/ctfkit-logo-small.png}
+								\item その他受託
+							\end{itemize}
+						\end{block}
+					\end{column}
+				\end{columns}
+			\end{alertblock}
+		\end{frame}
+
+		\begin{frame}\frametitle{CTF\,Kitとは}
+			\begin{block}{}
+				\begin{columns}[c]
+					\begin{column}{0.4\textwidth}
+					\includegraphics[width=\columnwidth]{image/ctfkit-logo-small.png}
+					\end{column}
+				\end{columns}
+			\end{block}
+			\begin{alertblock}{CTFの準備、これひとつ。}
+				\begin{itemize}
+					\item スコアサーバ」と「可視化サーバ」を内包した情報セキュリティ教育教材
+				\end{itemize}
+			\end{alertblock}
+			\begin{block}{導入実績}
+				学校教育から企業研修の様々なシーンで活用されているほか、「KOSENセキュリティコンテスト」\footnote{\url{https://sckosen2018.sasebo.ac.jp/index.html}}でも採用実績があります。
+			\end{block}
+		\end{frame}
+	% section 会社概要 (end)
+
+	\begin{frame}{CTFとは(1/2)}
+		\begin{alertblock}{CTF競技とは}
+			\begin{itemize}
+				\item CTFとはCapture The Flagの略で、情報セキュリティ技術の競技方式の一つ
+				\item 問題に隠されたFlagを様々な技術を使って探し出すことで得点することができ、その得点を競う競技
+				\item ゲーム形式であるため集中して取り組むことができ、参加者がセキュリティスキルを楽しみながら効率的に高めることができる
+			\end{itemize}
+		\end{alertblock}
+	\end{frame}
+
+	\begin{frame}{CTFとは(2/2)}
+		\begin{block}{情報セキュリティ人材の不足}
+			経済産業省が2016年に発表した「IT人材の最新動向と将来推計に関する調査」\footnote{\url{http://www.meti.go.jp/policy/it_policy/jinzai/27FY/ITjinzai_report_summary.pdf}}でも、
+			情報セキュリティ人材が産業界で不足していることが指摘されています。
+		\end{block}
+		\begin{block}{国内でもCTFに注目高まる}
+			「SECCON」\footnote{\url{https://2018.seccon.jp/}}や「富士通サイバーセキュリティコンテスト」\footnote{\url{http://www.fujitsu.com/jp/group/fnets/solutions/cybersecurity/edutraservice/}}など、国際大会を含めた大型イベントが国内で続々と開催されています。
+		\end{block}
+	\end{frame}
+
+	\section{インターンシップでの活動内容} % (fold)
+	\label{sec:インターンシップでの活動内容}
+	\begin{frame}\frametitle{インターンシップでの活動内容}
+		\begin{alertblock}{活動内容}
+			\begin{itemize}
+				\item CTF\,Kitの開発業務
+					\begin{itemize}
+						\item Golangを用いたAPIサーバーの開発
+					\end{itemize}
+				\item セキュリティコントストの運営業務
+					\begin{itemize}
+						\item 佐世保高専で実施された高専セキュリティコントスト2018
+						\item NTTネオメイト様で実施されたセキュリティコンテスト
+					\end{itemize}
+				\item コンテストに出題される問題作成
+				\item コンテストのインフラ整備（サーバー・競技ネットワークの構築）
+			\end{itemize}
+		\end{alertblock}
+	\end{frame}
+
+	\begin{frame}\frametitle{インターンシップを通じて学んだこと}
+		\begin{alertblock}{学んだこと}
+			\begin{itemize}
+				\item チーム開発スキル
+				\item セキュリティ業界の実情
+				\item 大手企業におけるセキュリティに対する姿勢
+				\item 高専機構としてのセキュリティ教育
+			\end{itemize}
+		私が将来就きたい業界であるセキュリティに関することを多く学ぶことができました。
+		\end{alertblock}
+	\end{frame}
+	% section インターンシップでの活動内容 (end)
+
+	\section{ご清聴ありがとうございました} % (fold)
+	\label{sec:ご清聴ありがとうございました}
+	% section ご清聴ありがとうございました (end)
+\end{document}
