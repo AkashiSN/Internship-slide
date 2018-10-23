@@ -1,13 +1,17 @@
 \documentclass[unicode,18px,aspectratio=169]{beamer} %アスペクト比16：9
 
-%% 和文用 %%
-\usepackage{bxdpx-beamer}
-\usepackage{zxjatype}
-\setCJKmainfont[Scale=0.95]{Meiryo} % フォント埋め込み
-
 %% スライドのテーマ %%
 %% https://qiita.com/htlsne/items/70cbb488e7a87cd9e228
 \usetheme[progressbar=frametitle]{metropolis}
+
+%% 和文用 %%
+\usepackage{luatexja} % LuaLaTeXでの和文用
+\usepackage{luatexja-fontspec} % フォント指定用
+\setmainfont[Ligatures=TeX]{TeXGyreTermes}
+\setsansfont[Ligatures=TeX]{TeXGyreHeros}
+\setmainjfont[Scale=0.95, BoldFont=meiryob]{meiryo} % メイリオフォント埋め込み
+\setsansjfont[Scale=0.95]{meiryob}
+\newfontfamily\urlfont{Latin Modern Mono} % URLのフォントを標準に戻す
 
 %% 各パッケージ %%
 \usepackage{amsmath} % 数式用
@@ -17,13 +21,13 @@
 \usepackage{hyperref} % ハイパーリンク
 \hypersetup{urlcolor=cyan} % URLの色をシアンにする
 \usepackage{url} % URL
+\renewcommand\UrlFont{\urlfont}
 
 %% タイトル %%
-\title[インターンシップ報告会]{インターンシップ報告会2018}%[略タイトル]{タイトル}
-\author[西]{西\ 総一朗}%[略名前]{名前}
-\institute[4EJ]{明石高専4年電気情報工学科}%[略所属]{所属}
-\newcommand{\todaye}{October 25, 2018}
-\date{\todaye}%日付
+\title[インターンシップを終えて]{インターンシップを終えて} % [略タイトル]{タイトル}
+\author[西]{西\ 総一朗} % [略名前]{名前}
+\institute[4EJ]{明石高専4年電気情報工学科情報工学コース} % [略所属]{所属}
+\date{2018年10月25日} % 日付
 
 \begin{document}
 	\begin{frame}[plain]\frametitle{}
