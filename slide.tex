@@ -19,7 +19,7 @@
 \usepackage{url} % URL
 
 %% タイトル %%
-\title[インターン報告会]{インターン報告会2018}%[略タイトル]{タイトル}
+\title[インターンシップ報告会]{インターンシップ報告会2018}%[略タイトル]{タイトル}
 \author[西]{西\ 総一朗}%[略名前]{名前}
 \institute[4EJ]{明石高専4年電気情報工学科}%[略所属]{所属}
 % \newcommand{\todaye}{\the\year 年 \the\month 月\the\day 日}
@@ -95,7 +95,7 @@
 			\end{block}
 			\begin{alertblock}{CTFの準備、これひとつ。}
 				\begin{itemize}
-					\item スコアサーバ」と「可視化サーバ」を内包した情報セキュリティ教育教材
+					\item CTF(Capture The Flag)を通じて、情報セキュリティ教育を行うための教材
 				\end{itemize}
 			\end{alertblock}
 			\begin{block}{導入実績}
@@ -105,7 +105,7 @@
 	% section 会社概要 (end)
 
 	\begin{frame}{CTFとは(1/2)}
-		\begin{alertblock}{CTF競技とは}
+		\begin{alertblock}{CTFとは}
 			\begin{itemize}
 				\item CTFとはCapture The Flagの略で、情報セキュリティ技術の競技方式の一つ
 				\item 問題に隠されたFlagを様々な技術を使って探し出すことで得点することができ、その得点を競う競技
@@ -121,6 +121,7 @@
 		\end{block}
 		\begin{block}{国内でもCTFへの注目高まる}
 			「SECCON」\footnote{\url{https://2018.seccon.jp/}}や「富士通サイバーセキュリティコンテスト」\footnote{\url{http://www.fujitsu.com/jp/group/fnets/solutions/cybersecurity/edutraservice/}}など、国際大会を含めた大型イベントが国内で続々と開催されています。
+			CTFは人材獲得に困難を抱える企業の一つの解答となりつつあり、解決手段としての注目も高まっています。
 		\end{block}
 	\end{frame}
 
@@ -130,17 +131,76 @@
 		\begin{alertblock}{活動内容}
 			\begin{itemize}
 				\item CTF\,Kitの開発業務
-					\begin{itemize}
-						\item Golangを用いたAPIサーバーの開発
-					\end{itemize}
 				\item セキュリティコントストの運営業務
-					\begin{itemize}
-						\item 佐世保高専で実施された高専セキュリティコントスト2018
-						\item NTTネオメイト様で実施されたセキュリティコンテスト
-					\end{itemize}
 				\item コンテストに出題される問題作成
 				\item コンテストのインフラ整備（サーバー・競技ネットワークの構築）
 			\end{itemize}
+		\end{alertblock}
+	\end{frame}
+
+	\begin{frame}\frametitle{CTF\,Kitの開発業務}
+		\begin{alertblock}{APIサーバーの開発}
+			\begin{itemize}
+				\item Golangを用いたAPIサーバーの開発
+					\begin{itemize}
+						\item 新規機能追加
+						\item 問題解決
+					\end{itemize}
+				\item Packer,\,Ansibleを用いたデプロイ環境の構築
+			\end{itemize}
+			\begin{columns}[c]
+				\begin{column}{0.4\textwidth}
+					\includegraphics[width=\columnwidth]{image/commits.png}
+				\end{column}
+			\end{columns}
+		\end{alertblock}
+	\end{frame}
+
+	\begin{frame}\frametitle{セキュリティコンテストの運営業務(1/2)}
+		\begin{alertblock}{KOSENセキュリティコンテスト2018}
+			KSEC\footnote{独立行政法人国立高等専門学校機構\ 情報セキュリティ人材育成事業}の一環として行われているコンテスト
+			\begin{columns}[c]
+				\begin{column}{0.5\textwidth}
+					\begin{itemize}
+						\item 今年で3回目
+						\item 佐世保高専が主催校
+					\end{itemize}
+					\vspace{2mm}
+					インターンシップで行った内容
+					\begin{itemize}
+						\item 出題される問題作成
+						\item 競技環境の構築
+						\item 競技中のサーバー保守
+						\item 競技中のカスタマーサポート
+					\end{itemize}
+				\end{column}
+				\begin{column}{0.45\textwidth}
+					\includegraphics[width=\columnwidth]{image/sckosen2018.jpg}
+				\end{column}
+			\end{columns}
+		\end{alertblock}
+	\end{frame}
+
+	\begin{frame}\frametitle{セキュリティコンテストの運営業務(2/2)}
+		\begin{alertblock}{某大手通信企業様でのCTF大会}
+			\begin{columns}[c]
+				\begin{column}{0.5\textwidth}
+					\begin{itemize}
+						\item 社員研修としてCTF大会
+					\end{itemize}
+					\vspace{5mm}
+					インターンシップで行った内容
+					\begin{itemize}
+						\item 出題される問題作成
+						\item 競技環境の構築
+						\item 競技中のサーバー保守
+						\item 競技中のカスタマーサポート
+					\end{itemize}
+				\end{column}
+				\begin{column}{0.5\textwidth}
+					\includegraphics[width=\columnwidth]{image/nwday.jpg}
+				\end{column}
+			\end{columns}
 		\end{alertblock}
 	\end{frame}
 
@@ -157,7 +217,7 @@
 	\end{frame}
 	% section インターンシップでの活動内容 (end)
 
-	\section{ご清聴ありがとうございました} % (fold)
-	\label{sec:ご清聴ありがとうございました}
-	% section ご清聴ありがとうございました (end)
+	\section{ありがとうございました} % (fold)
+	\label{sec:ありがとうございました}
+	% section ありがとうございました (end)
 \end{document}
